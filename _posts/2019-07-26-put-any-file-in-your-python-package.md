@@ -6,8 +6,8 @@ published: true
 # Introduction
 
 The mechanism for embedding the files that need to be used during the installation process is simple:
-if you need ```requirements.txt``` to be present - just put its name inside the ```MANIFEST.in```.
-But the files listed inside ```MANIFEST.in``` file are **NOT** placed anywhere in your system!
+if you need ```requirements.txt``` - just put its path inside the ```MANIFEST.in```.
+But the files listed inside ```MANIFEST.in``` file are **NOT** placed anywhere in the user's' system!
 For actually distributing *non-python* executables, configs or any other kind of file - you need proper arguments inside your ```setup``` function.
 
 # Goals
@@ -31,7 +31,7 @@ This is the structure of our test module:
 
 - Inside ```bin/``` there is neofetch - bash script which print the system info and logo in a really cool way ;)
 
-- foomod is a module that holds only one function - it fetches google.com and returns the HTML request status code. 
+- foomod is a module that holds only one function - it fetches google.com and returns the request's status code. 
 
 - There is only one dependency listed in ```requirements.txt``` - requests module.
 
