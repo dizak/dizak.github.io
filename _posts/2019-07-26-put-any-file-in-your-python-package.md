@@ -31,9 +31,38 @@ This is the structure of our test module:
 
 - Inside ```bin/``` there is neofetch - bash script which print the system info and logo in a really cool way ;)
 
-- foomod is a module that holds only one function - it fetches google.com and returns the request's status code. 
+- foomod is a dummy module that holds only one function - called - ```get_google_response_code``` - it fetches google.com and returns the request's status code.
+If the installation process of ```requirements``` fails then it will throw an error.
 
-- There is only one dependency listed in ```requirements.txt``` - requests module.
+Here is how ```foomod.__init__``` looks like:
+
+```python
+__version__ = 'v0.0.0'
+__author__ = 'dizak'
+
+__all__ = ['foomod']
+
+try:
+    from .foomod import get_google_response_code
+except ImportError:
+    print('Failed to import package. Ignore if running setup')
+```
+
+The  ```__author__``` and ```__version__``` variables which are imported by ```setup.py``` are defined there.
+Also, ```foomod``` is imported to the top-level of the module.
+
+...and here is ```foomod.py```:
+
+```python
+import requests as rq
+
+
+def get_google_response_code():
+    res = rq.get('https://www.google.com')
+    return res.status_code
+```
+
+- There is only one dependency listed in ```requirements.txt``` - ```requests``` module.
 
 Here is the content of ```MANIFEST.in```:
 
