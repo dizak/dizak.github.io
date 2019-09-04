@@ -42,7 +42,7 @@ include bin/neofetch
 include requirements.txt
 ```
 
-There is the content of setup.py:
+- finally, ```setup.py```:
 
 ```python
 from setuptools import find_packages
