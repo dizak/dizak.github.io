@@ -56,6 +56,12 @@ setup(
     version=__version__,
     author=__author__,
     packages=find_packages(),
+    include_package_data=True,
+    data_files=[
+        ('bin', ['bin/neofetch']),
+    ],
+    install_requires=open('requirements.txt').readlines(),
+    py_modules = ['foomod'],
 )
 ```
 
