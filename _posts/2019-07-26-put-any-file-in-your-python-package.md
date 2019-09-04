@@ -58,3 +58,15 @@ setup(
     packages=find_packages(),
 )
 ```
+
+
+# Installation Process
+
+As you can see, there is nothing really special about ```setup.py```.
+There are only two key things:
+
+1. To tell the ```setup``` function that it should include the package data.
+This is what ```include_package_data``` argument is for.
+
+2. To tell the ```setup``` function where the package data files should be placed and where can be found.
+This is what ```data_files``` argument is for.
