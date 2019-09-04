@@ -14,7 +14,7 @@ For actually distributing *non-python* executables, configs or any other kind of
 
 Prepare Python package which installs Python module and non-python executable.
 
-# Environment and set-up
+# Environment and Set-up
 
 This is the structure of our test module:
 
