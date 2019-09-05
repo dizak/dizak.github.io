@@ -29,6 +29,7 @@ projects:
       - gh_tests
       - dizak.github.io_legacy
       - prowler-binder
+      - foomod
 
 social_media:
   # behance: your_username
