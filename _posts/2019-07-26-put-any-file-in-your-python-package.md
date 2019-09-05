@@ -105,3 +105,11 @@ This is what ```include_package_data``` argument is for.
 
 2. To tell the ```setup``` function where the package data files should be placed and where can be found.
 This is what ```data_files``` argument is for.
+In this example, file found under relative path ```bin/neofetch``` is placed inside ```bin/``` directory relative to the directory where Python packages are installed.
+If you run ```pip install --user foobar-0.0.0.tar.gz``` then ```neofetch``` will be placed in ```$HOME/.local/bin/```.
+
+What's insteresting, you should stick to the structure of a list of tuples, each composed of a string and lists. If you change list to tuple, then you will an error like this:
+
+```bash
+Command "/usr/bin/python -u -c "import setuptools, tokenize;__file__='/tmp/pip-req-build-V3a4S3/setup.py';f=getattr(tokenize, 'open', open)(__file__);code=f.read().replace('\r\n', '\n');f.close();exec(compile(code, __file__, 'exec'))" install --record /tmp/pip-record-RvSfQT/install-record.txt --single-version-externally-managed --compile --user --prefix=" failed with error code 1 in /tmp/pip-req-build-V3a4S3/
+```
