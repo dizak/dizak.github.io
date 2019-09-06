@@ -114,3 +114,15 @@ What's insteresting, you should stick to the structure of list of tuples, each c
 ```bash
 Command "/usr/bin/python -u -c "import setuptools, tokenize;__file__='/tmp/pip-req-build-V3a4S3/setup.py';f=getattr(tokenize, 'open', open)(__file__);code=f.read().replace('\r\n', '\n');f.close();exec(compile(code, __file__, 'exec'))" install --record /tmp/pip-record-RvSfQT/install-record.txt --single-version-externally-managed --compile --user --prefix=" failed with error code 1 in /tmp/pip-req-build-V3a4S3/
 ```
+
+# How to reproduce it?
+
+At [this repo](https://github.com/dizak/foomod) you can find the foomod dummy module described above.
+There is a ```Dockerfile``` included, so you can simply build and run a container.
+If you want to see how this works on your system directly, do:
+
+1. Clone the repository with ```git clone https://github.com/dizak/foomod```.
+
+1. Run ```python setup.py sdist```.
+
+1. Run ```pip install --user foobar-0.0.0.tar.gz```
