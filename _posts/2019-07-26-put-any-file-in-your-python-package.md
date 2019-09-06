@@ -108,6 +108,9 @@ This is what ```data_files``` argument is for.
 
 In this example, file found under relative path ```bin/neofetch``` is placed inside ```bin/``` directory relative to the directory where Python packages are installed.
 If you run ```pip install --user foobar-0.0.0.tar.gz``` then ```neofetch``` will be placed in ```$HOME/.local/bin/```.
+The ```$HOME/.local/``` directory is a standard path for installing Python packages in the userspace.
+Nevertheless, it is not established among the distributions. If ```$HOME/.local/``` is not in your ```$PATH``` the installator will complain.
+And, of course, the package will not be importable, the executable will not be found without specifing the complete path.
 
 What's insteresting, you should stick to the structure of list of tuples, each composed of string and list. If you change list to tuple, then you will see an error like this:
 
