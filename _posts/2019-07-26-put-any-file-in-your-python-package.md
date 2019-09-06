@@ -105,6 +105,7 @@ This is what ```include_package_data``` argument is for.
 
 2. To tell the ```setup``` function where the package data files should be placed and where can be found in you package.
 This is what ```data_files``` argument is for.
+
 In this example, file found under relative path ```bin/neofetch``` is placed inside ```bin/``` directory relative to the directory where Python packages are installed.
 If you run ```pip install --user foobar-0.0.0.tar.gz``` then ```neofetch``` will be placed in ```$HOME/.local/bin/```.
 
