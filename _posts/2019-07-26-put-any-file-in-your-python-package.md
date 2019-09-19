@@ -12,7 +12,7 @@ For actually distributing *non-python* executables, configs or any other kind of
 
 # Goals
 
-Prepare Python package which installs Python module and non-python executable.
+Prepare Python package which installs the Python module and non-python executable.
 
 # Environment and Set-up
 
@@ -29,9 +29,9 @@ This is the structure of our test module:
 └── setup.py
 ```
 
-- Inside ```bin/``` there is neofetch - bash script which print the system info and logo in a really cool way ;)
+- Inside ```bin/``` there is neofetch - bash script which prints the system info and logo in a really cool way ;)
 
-- foomod is a dummy module that holds only one function - called - ```get_google_response_code``` - it fetches google.com and returns the request's status code.
+- ```foomod``` is a dummy module that holds only one function - called - ```get_google_response_code``` - it fetches google.com and returns the request's status code.
 If the installation process of ```requirements``` fails then it will throw an error.
 
 Here is how ```foomod.__init__``` looks like:
@@ -103,14 +103,14 @@ There are only two key things:
 1. To tell the ```setup``` function that it should include the package data.
 This is what ```include_package_data``` argument is for.
 
-2. To tell the ```setup``` function where the package data files should be placed and where can be found in you package.
+2. To tell the ```setup``` function where the package data files should be placed and where can be found in your package.
 This is what ```data_files``` argument is for.
 
 In this example, file found under relative path ```bin/neofetch``` is placed inside ```bin/``` directory relative to the directory where Python packages are installed.
 If you run ```pip install --user foobar-0.0.0.tar.gz``` then ```neofetch``` will be placed in ```$HOME/.local/bin/```.
 The ```$HOME/.local/``` directory is a standard path for installing Python packages in the userspace.
-Nevertheless, it is not established among the distributions. If ```$HOME/.local/``` is not in your ```$PATH``` the installator will complain.
-And, of course, the package will not be importable, the executable will not be found without specifing the complete path.
+Nevertheless, it is not established among the distributions. If ```$HOME/.local/``` is not in your ```$PATH``` the installer will complain.
+And, of course, the package will not be importable, the executable will not be found without specifying the complete path.
 
 What's insteresting, you should stick to the structure of list of tuples, each composed of string and list. If you change list to tuple, then you will see an error like this:
 
