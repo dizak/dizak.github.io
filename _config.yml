@@ -31,6 +31,8 @@ projects:
       - prowler-binder
       - foomod
 
+analytics: UA-124060014-4
+
 social_media:
   # behance: your_username
   # dribbble: your_username
