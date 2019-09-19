@@ -1,6 +1,7 @@
 ---
 title: "Distribute any file with your Python package"
 published: true
+comments: true
 ---
 
 # Introduction
